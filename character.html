@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="character.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="homepage-style.css">
+        <title>Character | Responsive Card</title>
+        <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/564x/4f/88/d4/4f88d43c1eaa3f093baee8cf187ab70e.jpg">
+    </head>
+    
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">Synthesis.</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="character.html" class="active">Character</a>
+                <a href="Spider-man_page.html">Spider-man</a>
+                <a href="Shadow-Page.html">Shadow</a>
+                <a href="index.html">Contact</a>
+            </nav>        
+        </header>
+            
+            <div class="container">
+                    <div class="card card0" onclick="redirectToURL('Spider-man_page.html')">
+                        <div class="border">
+                            <h2>Spider-man</h2>
+                            <div class="icons">
+                                <a href="https://www.playstation.com/th-th/games/marvels-spider-man-2/" target="_blank"><span class="material-symbols-outlined">videogame_asset</span></a>
+                                <a href="https://youtu.be/S5y-rSuyPIc?si=lk_zPwkK7FXdNeek" target="_blank"><span class="material-symbols-outlined">youtube_activity</span></a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card card1" onclick="redirectToURL('Shadow-Page.html')">
+                        <div class="border">
+                            <h2>Shadow</h2>
+                            <div class="icons">
+                                <a href="https://www.crunchyroll.com/games/eminenceinshadow/" target="_blank"><span class="material-symbols-outlined">videogame_asset</span></a>
+                                <a href="https://youtu.be/doyMLqO8uoc?si=qip6nVaDisVTPnwK" target="_blank"><span class="material-symbols-outlined">youtube_activity</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card2" onclick="redirectToURL('Emiya-Page.html')">
+                        <div class="border">
+                            <h2>Emiya (Archer)</h2>
+                            <div class="icons">                      
+                                <a href="https://play.google.com/store/apps/details?id=com.aniplex.fategrandorder.en&pcampaignid=web_share" target="_blank"><span class="material-symbols-outlined">videogame_asset</span></a>
+                                <a href="https://youtu.be/DbFKk0ci_KY?si=mE1FcWqAH5KkIzzw" target="_blank"><span class="material-symbols-outlined">youtube_activity</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        
+            <script>
+                function redirectToURL(url) {
+                    window.location.href = url;
+                }
+            </script>
+        
+    </body>
+</html>

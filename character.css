@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(32, 32, 64);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1280px;
+    min-width: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    height: 380px;
+    background: #808080;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); /* Modified box-shadow values */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.8s, opacity 0.8s, transform 0.5s; /* Add transform transition */
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1s ease forwards;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.2); /* Increase scale on hover for pop-up effect */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6); /* Add a subtle box shadow on hover */
+    transition: 1s;
+}
+
+.card:not(:hover) {
+    transform: scale(1.0); /* Add pop-in effect when not hovered */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.icons {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.5s; /* Add transform transition */
+    color: #DEF5E5;
+    fill: #DEF5E5;
+
+}
+
+.icons span:hover {
+    color: #B030B0;
+    transition-delay: 0.2s;
+}
+
+.icons a {
+    color: #DEF5E5;
+    fill: #DEF5E5;
+}
+
+.icons a:nth-child(1):hover span {
+    color: #B030B0;
+    transition-delay: 0.2s;
+}
+
+.icons a:nth-child(2):hover span {
+    color: #B030B0;
+    transition-delay: 0.2s;
+}
+
+.border {
+    width: 290px;
+    height: 370px;
+    background-color: transparent;
+    border-radius: 10px;
+    position: relative;
+    transition: border 1s;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    margin: 20px;
+    opacity: 1;
+}
+
+.card0 {
+    background: url(img1.jpg) center center no-repeat;
+    background-size: 400px;
+}
+.card0:hover {
+    background: url(img1.jpg) center center no-repeat;
+    background-size: 500px;
+}
+.card0:hover h2 {
+    opacity: 1;
+}
+.card0:hover material-symbols-outlined {
+    opacity: 1;
+}
+
+.card1 {
+    background: url(img2.jpg) center center no-repeat;
+    background-size: 400px;
+}
+.card1:hover {
+    background: url(img2.jpg) center center no-repeat;
+    background-size: 500px;
+}
+.card1:hover h2 {
+    opacity: 1;
+}
+.card1:hover material-symbols-outlined {
+    opacity: 1;
+}
+
+.card2 {
+    background: url(img3.jpg) center center no-repeat;
+    background-size: 400px;
+}
+.card2:hover {
+    background: url(img3.jpg) center center no-repeat;
+    background-size: 500px;
+}
+.card2:hover h2 {
+    opacity: 1;
+}
+.card2:hover material-symbols-outlined {
+    opacity: 1;
+}
+
+.card h2::before {
+    content: '';
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 380px;
+    background: rgb(32, 32, 64);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.card0 {
+    /* ... existing styles ... */
+    animation-delay: 0.5s; /* Adjust the delay for the first card */
+}
+
+.card1 {
+    /* ... existing styles ... */
+    animation-delay: 1s; /* Adjust the delay for the second card */
+}
+
+.card2 {
+    /* ... existing styles ... */
+    animation-delay: 1.5s; /* Adjust the delay for the third card */
+}
+
+/* Add a fadeIn animation for opacity transition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

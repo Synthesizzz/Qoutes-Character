@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(32, 32, 64);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+.Profile .text {
+    max-width: 600px;
+}
+
+.Profile .text h1 {
+    color: #dbb7ec;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* This will make the background only as wide as the text content */
+    display: inline-block;
+    /* padding: */
+    /* border-radius: 20px;
+    background: rgba(129, 212, 21, 0.1); */
+    
+}
+
+.Profile .text h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(32, 32, 64);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+}
+
+
+.Profile .text p {
+    color: #fbecf6;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+iframe {
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.Qoutes {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    
+}
+
+.Qoutes .text {
+    max-width: 600px;
+    float: right;
+    margin-left: 10px;
+}
+
+.Qoutes .text h1 {
+    color: #dbb7ec;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* This will make the background only as wide as the text content */
+    display: inline-block;
+    /* padding: */
+    /* border-radius: 20px;
+    background: rgba(129, 212, 21, 0.1); */
+    
+}
+
+.Qoutes .text h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(32, 32, 64);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+}
+
+
+.Qoutes .text p {
+    color: #e2d0ef;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    width: 1000px;
+}
+
+.Qoutes .card4 {
+    margin-right: 200px; /* Adjust the margin-right value as per your preference */
+    margin-left: -150px;
+}
+
+.frame {
+    display: 1;
+    margin-left: 150px;
+    margin-top: 120px;
+}
+
+.frame .card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #e2d0ef;
+    clip-path: circle(175px at center);
+    transition: 0.5s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.frame .card:hover .circle::before {
+    clip-path: circle(400px at center);
+    background: #291160;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.frame .card1 {
+    position: relative;
+    width: 700px;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    transition: 0.5s;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    /* margin-left: 750px; */
+    animation: fadeIn 4s ease forwards;
+    /* background-color: transparent; */
+}
+
+.frame .card1 .circle {
+    height: 100%;
+    width: 100%;
+}
+
+.frame .card1 img {
+    height: 450px;
+}
+
+.frame .card1:hover img{
+    height:575px;
+    left: 95%;
+}
+
+.frame .card1 .data {
+    width: 60%;
+    padding: 20px;
+    margin-left: 25px;
+}
+
+.frame .card1 .data h2 {
+    font-size: 2.5em;
+    color: #dbb7ec;
+}
+
+.frame .card1 .data h4 {
+    font-size: 1.25em;
+    margin-top: 15px;
+    color: #eb87e9;
+}
+
+.frame .card1 .data p {
+    color: #fbecf6;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.frame .card4 {
+    position: relative;
+    width: 700px;
+    max-width: 700px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    /* margin-left: 750px; */
+    animation: fadeIn 4s ease forwards;
+    /* background-color: transparent; */
+}
+
+/* .frame .card4 .data {
+    width: 60%;
+    padding: 20px;
+    margin-left: 25px;
+} */
+
+.frame .card4 .data h2 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    color: #dbb7ec;
+}
+
+.frame .card4 .data h4 {
+    font-size: 1.25em;
+    margin-top: 15px;
+    color: #eb87e9;
+}
+
+.frame .card4 .data p {
+    color: #fbecf6;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* navbar change color */
+
+.logo {
+    position: relative;
+     font-size: 25px;
+     font-style: italic;
+     color: #fbecf6;
+     text-decoration: none;
+     font-weight: 600;
+ }
+ 
+ /* .logo::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     background: rgb(32, 32, 64);
+     animation: showRight 1s ease forwards;
+     animation-delay: .4s;
+ } */
+ 
+ /* .navbar a::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     background: rgb(32, 32, 64);
+     animation: showRight 1s ease forwards;
+     animation-delay: 1s;
+ } */
+ 
+ .navbar a {
+     font-size: 18px;
+     color: #fbecf6;
+     text-decoration: none;
+     font-weight: 500px;
+     margin-left: 30px;
+     transition: .5s;
+ }
+ 
+ .navbar a:hover,
+ .navbar a.active {
+     color: #eb87e9;
+ }
+
+    /* Keyframe Animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* responsive */
+@media (max-width: 991px) {
+    .frame .card1 {
+        width: auto;
+        max-width: 400px;
+        align-items: flex-start;
+        margin: 10px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .frame .card1:hover {
+        height: 600px;
+    }
+
+    .frame .card1 .data {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+
+    .frame .card1:hover img {
+        top: 75%;
+        left: 50%;
+        height: 300px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+    .frame .card {
+        width: 80%; /* Adjust the width for the specified range */
+        margin: 10px;
+        margin-bottom: 75px; /* Adjust the margins for the specified range */
+        margin-top: 75px;
+    }
+
+    .frame .card img {
+        height: 350px; /* Adjust the height for the specified range */
+    }
+
+    .frame .card .data {
+        padding: 20px; /* Adjust the padding for the specified range */
+    }
+}
+
+@media (max-width: 420px) {
+    .frame .card .data {
+        padding: 20px;
+    }
+
+    .frame .card {
+        width: 100%;
+        margin: 10px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .frame .card img {
+        height: 250px;
+    }
+}
+

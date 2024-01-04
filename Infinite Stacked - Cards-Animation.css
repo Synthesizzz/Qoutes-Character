@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(32, 32, 64);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1280px;
+    min-width: 320px;
+    display: flex;
+    justify-content: center; /* Center the stack */
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+
+.card {
+    width: 250px;
+    height: 380px;
+    background: #808080;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.8s, opacity 0.8s, transform 0.5s;
+    opacity: 0;
+    cursor: pointer;
+    animation: fadeIn 1s ease forwards, infiniteStack 5s infinite;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.card:not(:last-child) {
+    margin-right: -75px; /* Adjust negative margin for overlap */
+}
+
+/* z-index for top-bottom */
+
+.card0 {
+    background: url('img1.jpg') center center no-repeat;
+    background-size: 400px;
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+.card1 {
+    background: url('img2.jpg') center center no-repeat;
+    background-size: 400px;
+    animation-delay: 2.4s;
+    z-index: 1;
+}
+
+.card2 {
+    background: url('img3.jpg') center center no-repeat;
+    background-size: 400px;
+    animation-delay: 2.8s;
+    z-index: 0.5;
+}
+
+.border {
+    width: 290px;
+    height: 370px;
+    background-color: transparent;
+    border-radius: 10px;
+    opacity: 1;
+    position: relative;
+    transition: all 1s;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.border:hover {
+    width: 290px;
+    height: 370px;
+    background-color: rgba(32, 32, 96, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    position: relative;
+    animation: fadeIn 1s ease forwards;
+    transition: all 1s;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.border:not(:hover) {
+    width: 290px;
+    height: 370px;
+    background-color: rgba(32, 32, 96, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    position: relative;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeOut 1s ease-out backwards;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    margin: 20px;
+    opacity: 1;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    margin: 20px;
+    opacity: 1;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: whitesmoke;
+    margin: 20px;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+/* ต้องให้อยู่บรรทัดเดียวกัน */
+
+
+/* Infinite Stack Stair steps animation */
+@keyframes infiniteStack {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    20% {
+        transform: translateY(-40px) translateX(40px); /* First step up */
+    }
+    40% {
+        transform: translateY(0px) translateX(0px); /* Back to the ground */
+    }
+    60% {
+        transform: translateY(-60px) translateX(60px); /* Second step up */
+    }
+    80% {
+        transform: translateY(-20px) translateX(20px); /* Back to the ground */
+    }
+}
+
+
+
+/* @keyframes infiniteStack {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-60px) translateX(-30px);
+    }
+    50% {
+        transform: translateY(-40px) translateX(40px);
+    }
+    75% {
+        transform: translateY(-60px) translateX(-30px);
+    }
+} */

@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    /* backface-visibility: hidden; */
+}
+
+.card {
+    position: relative;
+    /* top: 200px; */
+    width: 600px;
+    height: 350px;
+    max-width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    margin-bottom: 250px;
+    margin-top: 100px;
+    animation: fadeIn 3s ease forwards;
+    /* background-color: transparent; */
+}
+
+.card .circle {
+    /* position ตัวมีปัญหา พอมีมันแล้ว รูปภาพอยู่ในกรอบ */
+    /* position: absolute;  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #801e23;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover .circle::before {
+    clip-path: circle(400px at center);
+    background: #1b345b;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover img {
+    height: 500px; /* Adjust the desired height */
+}
+
+.card1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card1:hover img{
+    left: 72%;
+    height:475px;
+}
+
+.card1 .data {
+    position: relative;
+    width:50%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;  
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card1:hover .data {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+}
+
+/* margin-top / buttomm ช่วยกำหนดระยะห่าง */
+.card1 .data h2 {
+    font-style: oblique;
+    color: #c25863;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 0s;
+}
+
+.card1 .data h4 {
+    color: mintcream;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: 0s;
+}
+
+.card1 .data p {
+    color: mintcream;
+    position: relative;
+    transition: 0s;
+    margin-bottom: 15px;
+}
+
+.card2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card2:hover img{
+    left: 80%;
+    height:550px;
+}
+
+.card2 .data {
+    position: relative;
+    width:50%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;  
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card2:hover .data {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+}
+
+/* margin-top / buttomm ช่วยกำหนดระยะห่าง */
+.card2 .data h2 {
+    font-style: oblique;
+    color: #c25863;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 0s;
+}
+
+.card2 .data h4 {
+    color: mintcream;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: 0s;
+}
+
+.card2 .data p {
+    color: mintcream;
+    position: relative;
+    transition: 0s;
+    margin-bottom: 15px;
+}
+
+.card3 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 375px;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.card3:hover img{
+    left: 80%;
+    height:475px;
+}
+
+.card3 .data {
+    position: relative;
+    width:50%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;  
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card3:hover .data {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+}
+
+/* margin-top / buttomm ช่วยกำหนดระยะห่าง */
+.card3 .data h2 {
+    font-style: oblique;
+    color: #c25863;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 0s;
+}
+
+.card3 .data h4 {
+    color: mintcream;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: 0s;
+}
+
+.card3 .data p {
+    color: mintcream;
+    position: relative;
+    transition: 0s;
+    margin-bottom: 15px;
+}
+
+.card4 {
+    position: relative;
+}
+
+.card4 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card4:hover img {
+    left: 20%; /* Change to the desired value to move the image to the left */
+    height: 550px;
+}
+
+.card4 .data {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Align text to the right by default */
+    /* left: 100%; Change to 100% to move the text off-screen by default */
+    transform: translate(0, -50%);
+    width: 50%;
+    padding: 20px 40px 20px 20px; /* Adjust the padding for moving text to the right */
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    text-align: right; /* Align text to the right by default */
+}
+
+.card4:hover .data {
+    left: 50%; /* Change to the desired value to move the text to the right */
+    opacity: 1;
+    visibility: visible;
+}
+
+.card4 .data h2 {
+    font-style: oblique;
+    color: #c25863;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: 0s;
+}
+
+.card4 .data h4 {
+    color: mintcream;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: 0s;
+}
+
+.card4 .data p {
+    color: mintcream;
+    position: relative;
+    transition: 0s;
+    margin-bottom: 15px;
+}
+/* Keyframes Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 991px)
+{
+    .card {
+        width: auto;
+        max-width: 400px;
+        align-items: flex-start;
+        margin: 50px;
+        /* margin-bottom: 100px;
+        margin-top: 100px; */
+    }
+    .card:hover {
+        height: 600px;
+    }
+    .card .data {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+    .card:hover img {
+        top: 75%;
+        left: 50%;
+        height: 300px;
+    }
+
+    .card4 {
+        width: auto;
+        max-width: 400px;
+        margin: 50px;
+    }
+
+    .card4:hover {
+        height: 600px;
+    }
+
+    .card4 .data {
+        width: 100%;
+        right: 0; /* Adjust to keep text aligned to the right on smaller screens */
+        padding: 40px;
+        text-align: left;
+        right: auto;
+        left: 0;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .card4:hover img {
+        top: 75%;
+        left: 50%;
+        height: 300px;
+    }
+
+    .card4:hover .data {
+        right: 50%;
+        left: 50%; /* Change to the desired value to move the text to the right in smaller screens */
+    }
+
+}
+
+@media (max-width: 420px)
+{
+    .card .data {
+        padding: 40px;
+    }
+
+    .card4 .data {
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+
+}
